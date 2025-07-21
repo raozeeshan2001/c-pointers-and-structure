@@ -1,5 +1,15 @@
 #include <stdio.h>
 
+void pointerspractice(){
+// int a = 25;
+    // int *ptr = &a;
+    // printf("memory adress is %p\n", ptr);
+
+    // printf(" pointer value is %d \n", *ptr);
+    // printf ("size of int  %zu",sizeof(a));
+
+}
+
 void  PointersUsingArays(){
     
     int arr[4]={25,50,75,100};
@@ -11,17 +21,41 @@ void  PointersUsingArays(){
       }      
 }
 
+struct carstructure
+{
+  char name [20];
+  char color[20];
+  int model;
+  
+};
+
+
+void printstructurevalue(struct carstructure c){
+
+    printf("\n car name is %s",c.name);
+     printf("\n car color is %s",c.color);
+      printf("\n car model is %d",c.model);
+}
+void updatestructurevaluebypointer(struct carstructure *c){
+
+  c->model=2030;
+
+}
+
+
+
 int main()
 {
-    
-    int a = 25;
-    int *ptr = &a;
-    printf("memory adress is %p\n", ptr);
+       struct carstructure s1={"civic","blue",2021};
+       struct carstructure s2={"city","gray",2018};
+      
+       printstructurevalue(s1);
+       printstructurevalue(s2);
 
-    printf(" pointer value is %d \n", *ptr);
-    printf ("size of int  %zu",sizeof(a));
-    PointersUsingArays();
- 
+    
+      
+
+    
     return 0;
 }
 
