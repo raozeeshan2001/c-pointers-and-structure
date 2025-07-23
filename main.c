@@ -41,6 +41,21 @@ void updatestructurevaluebypointer(struct carstructure *c){
   c->model=2030;
 
 }
+void typecast(){
+
+   int a =5;
+      float b;
+      b=(float) a;// converting int to float
+      printf("float %f",b);
+      /////////////////////
+      // below is to typecast void pointer
+       int a1 =20;
+     void *ptr=&a;
+
+     int *intptr=(int*)ptr;
+
+     printf("ptr %d",*intptr);
+}
 
 
 
@@ -51,7 +66,7 @@ int main()
       
        printstructurevalue(s1);
        printstructurevalue(s2);
-
+     
     
       
 
